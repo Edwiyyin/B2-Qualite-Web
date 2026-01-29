@@ -181,6 +181,38 @@
     "screenshotsSources": []
   },
   {
+    "id": 26,
+    "title": "Les messages d'erreur d'authentification ne révèlent pas l'existence de comptes",
+    "authors": ["Marco BARONI"],
+    "path": "/rules/26",
+    "description": "Ne pas divulguer d'informations sur l'existence de comptes utilisateurs lors des tentatives d'authentification",
+    "tags": [
+      "Sécurité",
+      "Authentification",
+      "Protection des données",
+      "UX Sécurité"
+    ],
+    "objectives": [
+      "Prévenir les tentatives d'usurpation de comptes ou d'identité.",
+      "Améliorer la sécurité des utilisateurs et utilisatrices."
+    ],
+    "implementationIntro": "En réponse à une tentative de création de compte, de connexion ou à une demande de renvoi du mot de passe, ne pas afficher de messages qui révèlent l'existence ou l'absence d'un compte.",
+    "implementation": [
+      "Remplacer 'Cet email est déjà utilisé' par 'Si vous avez déjà un compte, utilisez la récupération de mot de passe.'",
+      "Remplacer 'Mot de passe incorrect' par 'Identifiants incorrects. Veuillez vérifier votre adresse et mot de passe.'",
+      "Remplacer 'Veuillez suivre la procédure de réinitialisation...' par 'Si un compte existe pour cette adresse, un email de réinitialisation a été envoyé.'",
+      "Remplacer 'Compte verrouillé' par 'Impossible de se connecter. Réessayer plus tard ou utilisez la récupération de mot de passe.'",
+      "Appliquer ces directives à tous les formulaires d'authentification (création, connexion, récupération de mot de passe)"
+    ],
+    "control": [
+      "Vérifier qu'aucune information n'est donnée sur l'existence d'un compte utilisateur lors de tentatives de création de compte",
+      "Vérifier que les messages d'erreur de connexion ne distinguent pas entre email inexistant et mot de passe incorrect",
+      "Vérifier que les messages de récupération de mot de passe ne confirment pas l'existence du compte",
+      "Tester avec des adresses valides et invalides pour confirmer que les messages sont identiques"
+    ],
+    "screenshotsSources": []
+  },
+  {
     "id": 87,
     "title": "Les processus complexes sont accompagnés de la liste de leurs étapes.",
     "authors": ["Adrien LECOMTE"],
