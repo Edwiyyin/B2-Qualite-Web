@@ -48,6 +48,34 @@
     "objective": "Assurer que les informations essentielles sont facilement accessibles et compréhensibles pour tous les utilisateurs, y compris ceux ayant des besoins spécifiques."
   },
   {
+    "id": 22,
+    "title": "Système d'Authentification Unifiée",
+    "authors": ["Marco BARONI"],
+    "path": "/rules/22",
+    "description": "Un identifiant unique pour tous vos services",
+    "tags": ["Sécurité", "Authentification", "UX", "Accessibilité"],
+    "objectives": [
+      "Permettre aux utilisateurs de se connecter avec un seul identifiant à tous les services.",
+      "Offrir une authentification renforcée avec support 2FA pour une meilleure sécurité."
+    ],
+    "implementationIntro": "Mettre en place un système d'authentification unifié permettant un accès centralisé à tous les services avec gestion des comptes utilisateurs et 2FA.",
+    "implementation": [
+      "Créer un formulaire d'authentification unique",
+      "Implémenter la gestion des comptes avec inscription et connexion",
+      "Ajouter le support de l'authentification à deux facteurs (2FA)",
+      "Afficher un tableau de bord avec la liste des services accessibles",
+      "Enregistrer l'historique d'activité des utilisateurs"
+    ],
+    "control": [
+      "Vérifier la possibilité de s'inscrire avec un nouveau compte",
+      "Tester la connexion avec les identifiants créés",
+      "Vérifier l'activation et l'utilisation du 2FA",
+      "Vérifier l'accès aux services après authentification",
+      "Vérifier l'historique d'activité est enregistré"
+    ],
+    "screenshotsSources": []
+  },
+  {
     "id": 10,
     "title": "Les contenus ou fichiers destinés à des espaces publics peuvent être vérifiés avant leur envoi définitif.",
     "authors": ["Marco BARONI"],
@@ -115,7 +143,7 @@
     "authors": ["Adrien LECOMTE"],
     "path": "/rules/89",
     "description": "Après avoir décidé de passer à l’étape suivante d’un processus complexe, il arrive souvent d’avoir besoin de vérifier ce qu’on a saisi précédemment. Laissez aux internautes la possibilité de douter, de vérifier, et de se tromper, bien sûr.",
-    "tags": ["Accessibilité","Développement", "Conception", "Formulaires"],
+    "tags": ["Accessibilité", "Développement", "Conception", "Formulaires"],
     "objectives": [
       "Faciliter l’utilisation des formulaires répartis sur plusieurs pages successives.",
       "Réduire les risques d’erreurs de saisie. Limiter les risques d’abandon en cours de processus."
@@ -133,7 +161,13 @@
     "authors": ["Adrien LECOMTE"],
     "path": "/rules/90",
     "description": "Ne vous est-il jamais arrivé de croire que vous pouviez tout simplement retourner voir ce que vous aviez saisi à l’étape précédente lors de votre déclaration d’impôts, par exemple, et de constater peu après que tout ce que vous aviez saisi avant ce remords était perdu ? Évitons ce genre de déception à nos utilisateurs.",
-    "tags": ["Basics", "Accessibilité", "Conception","Développement", "Formulaires"],
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Conception",
+      "Développement",
+      "Formulaires"
+    ],
     "objectives": [
       "Faciliter l’utilisation des formulaires répartis sur plusieurs pages successives.",
       "Limiter les risques d’abandon en cours de processus."
@@ -170,9 +204,7 @@
     "path": "/rules/92",
     "description": "Saisissez votre adresse e-mail. C’est bon, c’est fait ? Et si maintenant je vous demande de la saisir de nouveau, vous allez peut-être avoir la flemme de le faire et voudrez la copier depuis le premier champ pour la coller dans le deuxième. De quel droit certains sites voudraient-ils vous empêcher de faire cela ? Vive le copier-coller libre !",
     "tags": ["Basics", "Accessibilité", "Développement", "Formulaires"],
-    "objectives": [
-      "Faciliter la saisie dans les formulaires."
-    ],
+    "objectives": ["Faciliter la saisie dans les formulaires."],
     "implementationIntro": "",
     "implementation": [
       "Ne pas intercepter les événements JavaScript onpaste ou keydown pour bloquer le coller dans un champ de formulaire.",
