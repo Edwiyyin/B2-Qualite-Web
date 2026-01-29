@@ -246,6 +246,36 @@
     "screenshotsSources": []
   },
   {
+    "id": 28,
+    "title": "Les données sensibles ne sont pas transmises en clair dans l'URL",
+    "authors": ["Marco BARONI"],
+    "path": "/rules/28",
+    "description": "Protéger les données sensibles en évitant qu'elles ne soient visibles dans l'URL",
+    "tags": ["Sécurité", "Confidentialité", "Formulaires", "POST", "HTTP"],
+    "objectives": [
+      "Éviter que des données sensibles ne soient publiques et stockées en clair aux différentes étapes de l'accès à la page (FAI, proxy, serveur web, historique du navigateur, services tiers…).",
+      "Permettre à l'utilisateur de saisir des données sensibles en sachant qu'elles seront protégées et confidentielles.",
+      "Renforcer la confiance des utilisateurs sur l'utilisation de leurs données"
+    ],
+    "implementationIntro": "Utiliser la méthode POST pour envoyer les données de formulaire sensibles et ne jamais inclure de données sensibles dans les URLs.",
+    "implementation": [
+      "Envoyer les données de formulaire sensibles par la méthode POST, jamais GET",
+      "Ne pas inscrire de données sensibles (identifiants, mots de passe, numéros bancaires) dans l'URL d'un lien",
+      "Ne pas utiliser le format http://user:pass@example.com/",
+      "Ne pas transmettre les identifiants de session dans l'URL",
+      "Utiliser les cookies pour transmettre les identifiants de session (cookies HttpOnly de préférence)",
+      "Tester avec les cookies activés et désactivés pour éviter les fallback non sécurisés"
+    ],
+    "control": [
+      "Vérifier lors de connexion qu'aucune donnée n'apparaît dans l'URL (pas de login.php?user=xxx@password=yyy)",
+      "Contrôler que les pages ne comportent pas de liens contenant des identifiants ou mots de passe",
+      "Vérifier que l'identifiant de session n'est pas transmis dans l'URL (pas de page.php?SESSIONID=123abc)",
+      "Tester en activant et désactivant les cookies du navigateur",
+      "Vérifier que les données sensibles soient transmises via POST (onglet Network du navigateur)"
+    ],
+    "screenshotsSources": []
+  },
+  {
     "id": 87,
     "title": "Les processus complexes sont accompagnés de la liste de leurs étapes.",
     "authors": ["Adrien LECOMTE"],
